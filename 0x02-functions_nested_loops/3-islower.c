@@ -14,4 +14,5 @@ if (c >= 'a' && c <= 'z')
 {
 	return (0);
 }
+_putchar('\n');
 }
