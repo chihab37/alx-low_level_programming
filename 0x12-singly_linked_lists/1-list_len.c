@@ -1,4 +1,4 @@
-#include "main.h"
+#include "lists.h"
 /**
   *list_len - check the code for Holberton School students.
   *@h: name of the list

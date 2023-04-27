@@ -1,4 +1,4 @@
-#include "main.h"
+#include "lists.h"
 /**
  *myStartupFun - Apply the constructor attribute to myStartupFun() so that it
  *is executed before main()
