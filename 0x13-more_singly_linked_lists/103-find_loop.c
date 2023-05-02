@@ -1,33 +1,31 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <dirent.h>
-#include <sys/stat.h>
-#include <string.h>
-
-int main(int argc, char *argv[])
+#include "lists.h"
+/**
+ * find_listint_loop - finds the loop in a linked list.
+ * @head: pointer to the beginning of the list
+ *
+ * Return: address of the node where the loop starts or NULL if there's no loop
+ */
+listint_t *find_listint_loop(listint_t *head)
 {
-    DIR *dir;
-    struct dirent *entry;
-    struct stat fileStat;
-    char path[1024];
+	listint_t *tortoise, *hare;
 
-    if (argc != 2)
-    {
-  if (argc != 2)
-    {
-        fprintf(stderr, "Usage: %s <directory>\n", argv[0]);
-        return 1;
-    }
-
-    dir = opendir(argv[1]);
-    if (dir == NULL)
-    {
-        perror("opendir");
-        return 1;
-    }
-
-    while ((entry = opendir)) 
-	   {
-		   struct listint_t = new;
-		   malloc((sizeof(listint_t list));
-
+	tortoise = hare = head;
+	while (tortoise && hare && hare->next)
+	{
+		tortoise = tortoise->next;
+		hare = hare->next->next;
+		if (tortoise == hare)
+		{
+			tortoise = head;
+			break;
+		}
+	}
+	if (!tortoise || !hare || !hare->next)
+		return (NULL);
+	while (tortoise != hare)
+	{
+		tortoise = tortoise->next;
+		hare = hare->next;
+	}
+	return (hare);
+}

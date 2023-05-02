@@ -1,11 +1,10 @@
-#include "lists_h"
+#include "lists.h"
 /**
   *add_nodeint - add node at the begining of a listint_t
   *@head: head of a double pointer
   *@n: int add the list
   *Return: NULL if failure
   */
-
 listint_t *add_nodeint(listint_t **head, const int n)
 {
 	listint_t *ptr;
@@ -15,7 +14,6 @@ listint_t *add_nodeint(listint_t **head, const int n)
 	ptr = malloc(sizeof(listint_t));
 	if (ptr == NULL)
 		return (NULL);
-
 	ptr->n = n;
 	ptr->next = *head;
 	*head = ptr;
